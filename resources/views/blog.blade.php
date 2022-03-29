@@ -4,12 +4,11 @@
     @foreach ($blogs as $blog)
     <article class="mb-5">
         <h2>
-            <a href="/blogs/{{$blog["slug"]}}">
-                {{$blog["title"]}}
+            <a href="/blogs/{{$blog->id}}">
+                {{$blog->title}}
             </a>
         </h2>
-        <h5>{{$blog["author"]}}</h5>
-        <p>{{$blog["body"]}}</p>
+        <p>{{$blog->excerpt}}</p>
     </article>
     @endforeach
 @endsection

@@ -2,8 +2,8 @@
 
 @section('container')
     <article>
-        <h2>{{$blogs["title"]}}</h2>
-        <h5>{{$blogs["author"]}}</h5>
-        <p>{{$blogs["body"]}}</p>
+        <h2 class="mb-5">{{$blogs["title"]}}</h2>
+        <!-- <p>{{$blogs["body"]}}</p> -->
+        {!! $blogs->body !!}
     </article>
 @endsection
