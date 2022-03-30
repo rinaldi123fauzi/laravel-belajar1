@@ -1,8 +1,8 @@
 Blog::create([
-    'title' => 'Judul Pertama',
-    'category_id' => 2,
-    'slug' => 'judul-pertama',
-    'excerpt' => 'Lorem Ipsum pertama',
+    'title' => 'Judul Ketiga',
+    'category_id' => 3,
+    'slug' => 'judul-ketiga',
+    'excerpt' => 'Lorem Ipsum ketiga',
     'body' => 'lallall'
 ])
 

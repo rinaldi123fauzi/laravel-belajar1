@@ -1,9 +1,9 @@
 <?php
 
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +34,18 @@ Route::get('/blog', [BlogController::class, 'index']);
 
 //halaman single blogs
 Route::get('blogs/{blog:slug}', [BlogController::class, 'show']);
+
+Route::get('/categories', function(){
+    return view('categories', [
+        'title' => 'Blog Categories',
+        'categories' => Category::all()
+    ]);
+});
+
+Route::get('/categories/{category:slug}', function(Category $category){
+    return view('category', [
+        'title' => $category->name,
+        'blogs' => $category->blogs,
+        'category' => $category->name
+    ]);
+});
