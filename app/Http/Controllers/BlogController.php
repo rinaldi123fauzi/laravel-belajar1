@@ -15,10 +15,19 @@ class BlogController extends Controller
         ]);
     }
 
-    public function show($slug){
+    //cara pertama
+    // public function show($slug){
+    //     return view('detail_blogs', [
+    //         "title" => "Single Post",
+    //         "blogs" => Blog::find($slug)
+    //     ]);
+    // }
+
+    //cara kedua
+    public function show(Blog $blog){
         return view('detail_blogs', [
             "title" => "Single Post",
-            "blogs" => Blog::find($slug)
+            "blogs" => $blog
         ]);
     }
 }

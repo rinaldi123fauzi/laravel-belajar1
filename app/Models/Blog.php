@@ -9,6 +9,6 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','excerpt','body']; //permit yang diizinkan
+    protected $fillable = ['title','slug','excerpt','body']; //permit yang diizinkan
     // protected $guarded = ['title','excerpt','body']; //permit yang tidak diizinkan
 }
