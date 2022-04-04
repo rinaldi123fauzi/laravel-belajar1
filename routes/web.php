@@ -30,7 +30,7 @@ Route::get('/about', function(){
     ]);
 });
 
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blogs', [BlogController::class, 'index']);
 
 //halaman single blogs
 Route::get('blogs/{blog:slug}', [BlogController::class, 'show']);
